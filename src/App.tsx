@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import ApiService from './services/api';
 import { Movie } from './models/movie';
+import MovieCard from './components/MovieCard/MovieCard'; 
 
 export default function App() {
 
@@ -19,18 +20,12 @@ export default function App() {
         }
         getMovies();
     }, []);
-
-    function handleFavorite(movie: Movie) {
-        alert(`${movie.title} adicionado aos favoritos!`);        
-    }
     
     return (
-        <ul>
+        <>
             {movies.map(movie => (
-                <li key={movie.episode_id}>
-                    {movie.title}
-                    <button onClick={() => handleFavorite(movie)}>Adicionar aos favoritos</button>
-                </li>))}
-        </ul>
+                <MovieCard key={movie.episode_id} movie={movie}/>
+            ))}
+        </>
     );
 }
