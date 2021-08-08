@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import ApiService from './services/api';
 import { Movie } from './models/movie';
-import MovieCard from './components/MovieCard/MovieCard'; 
+import CardsGrid from './components/CardsGrid/CardsGrid'; 
 
 export default function App() {
 
@@ -22,10 +22,6 @@ export default function App() {
     }, []);
     
     return (
-        <>
-            {movies.map(movie => (
-                <MovieCard key={movie.episode_id} movie={movie}/>
-            ))}
-        </>
+        <CardsGrid movies={movies}/>
     );
 }
