@@ -1,5 +1,13 @@
+body {
+    background: #e7f2f8;
+}
+
 h1, h2, h3 {
     color: #535353;
+}
+
+p {
+    color: #939393;
 }
 
 h1 {
