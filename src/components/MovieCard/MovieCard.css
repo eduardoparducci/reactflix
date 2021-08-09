@@ -9,7 +9,7 @@
     height: 8rem;
 }
 .MovieCard:hover {
-    background: #d0d0d0;
+    background: #cfc7c2;
     cursor: pointer;
 }
 
