@@ -1,14 +1,23 @@
-import {Movie} from '../../models/movie'
-import './MovieCard.css'
+import React, { useState } from 'react';
+import {Movie} from '../../models/movie';
+import './MovieCard.css';
 
 function MovieCard(props: {movie: Movie}) {
 
-    function handleFavorite(movie: Movie) {
-        alert(`${movie.title} adicionado aos favoritos!`);
+    const [favorite, setFavorite] = useState(false);
+    
+    function toggleFavorite(movie: Movie) {
+        if(!favorite) {
+            alert(`${movie.title} added to favorites :)`);
+        } else {
+            alert(`${movie.title} removed from favorites :(`);
+        }
+        setFavorite(!favorite);
+        return favorite;
     }
     
     return (
-        <div className="MovieCard" onClick={() =>handleFavorite(props.movie)}>
+        <div className={`MovieCard ${favorite? 'Favorite' : ''}`} onClick={() =>toggleFavorite(props.movie)}>
           <div className="ThumbWrapper">
             <img
               className="Thumb"
