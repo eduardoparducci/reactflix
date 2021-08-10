@@ -15,7 +15,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Launches the test runner in the interactive watch mode.\
 Below you can see the test status report given by the command below:
 
-|--------------------------|---------|----------|---------|---------|-------------------|
 |File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s |
 |--------------------------|---------|----------|---------|---------|-------------------|
 |All files                 |   96.67 |      100 |     100 |   96.67 |                   |
@@ -30,7 +29,6 @@ Below you can see the test status report given by the command below:
 |  index.tsx               |     100 |      100 |     100 |     100 |                   |
 | src/services             |     100 |      100 |     100 |     100 |                   |
 |  api.ts                  |     100 |      100 |     100 |     100 |                   |
-|--------------------------|---------|----------|---------|---------|-------------------|
 
 
 ## Project Structure
