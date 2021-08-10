@@ -17,7 +17,7 @@ function MovieCard(props: {movie: Movie}) {
     }
     
     return (
-        <div className={`MovieCard ${favorite? 'Favorite' : ''}`} onClick={() =>toggleFavorite(props.movie)}>
+        <div data-testid='MovieCard' className={`MovieCard ${favorite? 'Favorite' : ''}`} onClick={() =>toggleFavorite(props.movie)}>
           <div className="ThumbWrapper">
             <img
               className="Thumb"
