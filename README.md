@@ -11,9 +11,26 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm test` (in construction)
+### `npm test -- --coverage --watchAll`
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Below you can see the test status report given by the command below:
+
+|--------------------------|---------|----------|---------|---------|-------------------|
+|File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s |
+|--------------------------|---------|----------|---------|---------|-------------------|
+|All files                 |   96.67 |      100 |     100 |   96.67 |                   |
+|  App.tsx                 |     100 |      100 |     100 |     100 |                   |
+| src/components/CardsGrid |     100 |      100 |     100 |     100 |                   |
+|  CardsGrid.tsx           |     100 |      100 |     100 |     100 |                   |
+| src/components/MovieCard |     100 |      100 |     100 |     100 |                   |
+|  MovieCard.tsx           |     100 |      100 |     100 |     100 |                   |
+| src/pages/home           |     100 |      100 |     100 |     100 |                   |
+|  Home.tsx                |     100 |      100 |     100 |     100 |                   |
+| src/routes               |     100 |      100 |     100 |     100 |                   |
+|  index.tsx               |     100 |      100 |     100 |     100 |                   |
+| src/services             |     100 |      100 |     100 |     100 |                   |
+|  api.ts                  |     100 |      100 |     100 |     100 |                   |
+|--------------------------|---------|----------|---------|---------|-------------------|
 
 
 ## Project Structure
