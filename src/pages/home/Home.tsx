@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ApiService from '../../services/api';
+import {getMovies} from '../../services/api';
 import {Movie} from '../../models/movie';
 import CardsGrid from '../../components/CardsGrid/CardsGrid'; 
 import './Home.css';
@@ -12,20 +12,18 @@ function Home() {
     
     // get Movies from API when page is created
     useEffect(() => {
-        const api = new ApiService();
-        const getMovies = async () => {
+        const getMoviesList = async () => {
             try {
                 setError(false);
                 setLoading(true);
-                const response = await api.getMovies();
+                const response = await getMovies();
                 setMovies(response);
                 setLoading(false);
             } catch(err) {
                 setError(true);
-                console.log(err);
             }
         };
-        getMovies();
+        getMoviesList();
     }, []);
 
     return (
