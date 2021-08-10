@@ -1,17 +1,8 @@
 import axios from 'axios';
 
+const base_url = 'https://swapi.dev/api/';
 
-
-export default class ApiService {
-
-    api = axios.create({
-        baseURL: 'https://swapi.dev/api',
-        timeout: 10000
-    });
-
-    async getMovies() {
-        const response = await this.api.get('films/');
-        console.log(response.data.results);
-        return response.data.results;
-    }
+export async function getMovies() {
+    const response = await axios.get(`${base_url}films/`);
+    return response.data.results;
 }
