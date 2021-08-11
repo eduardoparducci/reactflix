@@ -4,27 +4,29 @@ import './MovieCard.css';
 
 function MovieCard(props: {movie: Movie}) {
 
-    const [favorite, setFavorite] = useState(false);
+    const [expanded, setExpanded] = useState(false);
     
-    function toggleFavorite(movie: Movie) {
-        if(!favorite) {
-            alert(`${movie.title} added to favorites :)`);
-        } else {
-            alert(`${movie.title} removed from favorites :(`);
-        }
-        setFavorite(!favorite);
-        return favorite;
+    function toggleExpanded(movie: Movie) {
+        setExpanded(!expanded);
+        return expanded;
     }
     
     return (
-        <div data-testid='MovieCard' className={`MovieCard ${favorite? 'Favorite' : ''}`} onClick={() =>toggleFavorite(props.movie)}>
+        <div data-testid='MovieCard' className={`MovieCard ${expanded? 'Expanded' : ''}`} onClick={() =>toggleExpanded(props.movie)}>
           <div className="ThumbWrapper">
             <img
               className="Thumb"
               src={`${process.env.PUBLIC_URL}/assets/${props.movie.episode_id}.png`} alt="Movie thumb"
             />
           </div>
-          <h2 className="CardTitle">{props.movie.title}</h2>
+          <h2 className="CardTitle">{props.movie.title}</h2>          
+          <p className={`MovieDescription ${expanded? 'Visible' : ''}`}>{props.movie.opening_crawl}</p>
+          <div className="MoreInfoWrapper">
+              <p className="MoreInfoText">{expanded? 'Less Info' : 'More Info'}</p>
+              <p className="MoreInfoIcon">{expanded? '̭' : '̬'}    </p>
+          </div>
+
+
         </div>
     );
 }

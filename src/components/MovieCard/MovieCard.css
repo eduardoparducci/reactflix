@@ -1,30 +1,41 @@
 .MovieCard {
+    position: relative;
     background: #fff7f2;
-    margin: 2rem;
     border-radius: 0.5rem;
     border-left: solid;
     border-left-color: #535353;
-    padding: 1rem;
+    padding: 1rem 0 0 0;
     width: 16rem;
-    height: 8rem;
+    height: 10rem;
+    box-shadow: 5px 5px 10px #535353;
+    transition: 0.3s;
+    overflow: hidden;
 }
 .MovieCard:hover {
-    background: #cfc7c2;
     cursor: pointer;
+    box-shadow: 7px 7px 18px #535353;
 }
 
 .ThumbWrapper {
     display: flex;
     width: 100%;
-    height: 70%;
+    height: 5rem;
     justify-content:center;
     align-items:center;
     overflow:hidden;    
 }
 
-.Favorite {
+.Expanded {
+    width: 25rem;
+    height: 20rem;
     border-left-color: coral;
     border-left-width: 6px;
+    box-shadow: 5px 5px 10px coral;
+    transition: 0.5s;
+}
+
+.Expanded:hover {
+    box-shadow: 7px 7px 18px coral;
 }
 
 .Thumb {
@@ -38,4 +49,47 @@
     font-size: medium;
     margin: 1rem 0;
     text-align: center;    
+}
+
+.MovieCard:hover > .MoreInfoWrapper {
+    bottom: 0px;
+}
+
+.MoreInfoWrapper {
+    position: absolute;
+    width: 100%;
+    bottom: -2rem;
+    height: 2rem;
+    text-align: center;
+    transition: bottom .6s;
+}
+
+.MoreInfoText, .MoreInfoIcon {
+    font-size: 15px;
+    line-height: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.MoreInfoIcon {
+    line-height: 0px;
+}
+
+.MovieDescription {
+    font-size: 0.8em;
+    text-align: justify;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.Visible {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+    .Expanded {
+        width: 100%;
+        height: auto;
+        padding-bottom: 2rem;
+    }
 }
