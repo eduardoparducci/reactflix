@@ -29,7 +29,7 @@ function Home() {
     return (
     <>
         <h1>Star Wars Movie List</h1>
-        <p>Click on the movie titles that you like the most to add them to your favorites list!</p>
+        <p>Click on the movie titles to know a little more about them!</p>
         {error  && <h2>An error occured, please refresh the page.</h2>}
         {!error && loading && <h2>Fetching movies from the dark side...</h2>}
         {!error && !loading && <CardsGrid movies={movies}/>}
