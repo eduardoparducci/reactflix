@@ -1,4 +1,5 @@
 export interface Movie {
     title: string,
-    episode_id: number
+    episode_id: number,
+    opening_crawl: string
 }
