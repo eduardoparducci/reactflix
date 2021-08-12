@@ -5,5 +5,6 @@ export interface Movie {
     director?: string,
     producer?: string,
     release_date?: string,
-    characters: string[]
+    characters: string[],
+    edited: string
 }

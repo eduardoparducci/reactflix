@@ -27,7 +27,7 @@
 
 .Expanded {
     width: 25rem;
-    height: 20rem;
+    height: 22rem;
     border-left-color: coral;
     border-left-width: 6px;
     box-shadow: 5px 5px 10px coral;
@@ -76,6 +76,14 @@
 }
 
 .MovieDescription {
+    font-size: 0.8em;
+    text-align: justify;
+    padding: 0 2rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.MovieDate {
     font-size: 0.8em;
     text-align: justify;
     padding: 0 2rem;
