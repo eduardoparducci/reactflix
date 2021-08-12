@@ -15,21 +15,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Launches the test runner in the interactive watch mode.\
 Below you can see the test status report given by the command below:
 
-|File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s |
-|--------------------------|---------|----------|---------|---------|-------------------|
-|All files                 |   96.67 |      100 |     100 |   96.67 |                   |
-|  App.tsx                 |     100 |      100 |     100 |     100 |                   |
-| src/components/CardsGrid |     100 |      100 |     100 |     100 |                   |
-|  CardsGrid.tsx           |     100 |      100 |     100 |     100 |                   |
-| src/components/MovieCard |     100 |      100 |     100 |     100 |                   |
-|  MovieCard.tsx           |     100 |      100 |     100 |     100 |                   |
-| src/pages/home           |     100 |      100 |     100 |     100 |                   |
-|  Home.tsx                |     100 |      100 |     100 |     100 |                   |
-| src/routes               |     100 |      100 |     100 |     100 |                   |
-|  index.tsx               |     100 |      100 |     100 |     100 |                   |
-| src/services             |     100 |      100 |     100 |     100 |                   |
-|  api.ts                  |     100 |      100 |     100 |     100 |                   |
-
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |   55.56 |    55.17 |   68.42 |    56.6 |                   
+ src                      |      50 |      100 |     100 |      50 |                   
+  App.tsx                 |     100 |      100 |     100 |     100 |                   
+  index.tsx               |       0 |      100 |     100 |       0 | 6                 
+ src/components/CardsGrid |     100 |      100 |     100 |     100 |                   
+  CardsGrid.tsx           |     100 |      100 |     100 |     100 |                   
+ src/components/MovieCard |     100 |      100 |     100 |     100 |                   
+  MovieCard.tsx           |     100 |      100 |     100 |     100 |                   
+ src/pages/home           |     100 |      100 |     100 |     100 |                   
+  Home.tsx                |     100 |      100 |     100 |     100 |                   
+ src/pages/movieDetail    |       0 |        0 |       0 |       0 |                   
+  MovieDetail.tsx         |       0 |        0 |       0 |       0 | 12-75             
+ src/routes               |     100 |      100 |     100 |     100 |                   
+  index.tsx               |     100 |      100 |     100 |     100 |                   
+ src/services             |     100 |      100 |     100 |     100 |                   
+  api.ts                  |     100 |      100 |     100 |     100 |                   
+--------------------------|---------|----------|---------|---------|-------------------
 
 ## Project Usage and Navigation
 The project has two main page components. The navigation and information about them are presented below.
