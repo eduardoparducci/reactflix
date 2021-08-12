@@ -7,6 +7,11 @@ export async function getMovies() {
     return response.data.results;
 }
 
+export async function getChars() {
+    const response = await axios.get(`${base_url}/people/`);
+    return response.data.results;
+}
+
 export async function getChar(url: string) {
     const response = await axios.get(`${url}`);
     return response.data;
