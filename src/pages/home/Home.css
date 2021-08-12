@@ -3,6 +3,13 @@ h1, h2 {
     text-align: center;
 }
 
-p {
-    padding: 0 2rem;
+.Tooltip {
+    padding: 0 7rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .Tooltip {
+        padding: 0 1rem;
+    }
 }

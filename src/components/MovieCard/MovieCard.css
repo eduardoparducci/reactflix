@@ -78,6 +78,7 @@
 .MovieDescription {
     font-size: 0.8em;
     text-align: justify;
+    padding: 0 2rem;
     opacity: 0;
     transition: opacity .5s;
 }
