@@ -46,8 +46,8 @@ The source files presented in this project are listed and briefly explained belo
 ├── models
 │   └── movie.ts - Data representation of a movie given by API
 ├── pages
-│   ├── favorites - Display all favorite movies
-│   │   └── Favorites.tsx
+│   ├── movieDetail - Display all movie information
+│   │   └── MovieDetail.tsx
 │   └── home - Display all movies
 │       ├── Home.css
 │       └── Home.tsx
