@@ -31,6 +31,15 @@ Below you can see the test status report given by the command below:
 |  api.ts                  |     100 |      100 |     100 |     100 |                   |
 
 
+## Project Usage and Navigation
+The project has two main page components. The navigation and information about them are presented below.
+
+### Home Page (/)
+Lists all movies and opening crawl information.
+
+### Movie Detail Page (/movie/{id})
+Show information about a movie matching the id property in URL.
+
 ## Project Structure
 The source files presented in this project are listed and briefly explained below:
 ```
