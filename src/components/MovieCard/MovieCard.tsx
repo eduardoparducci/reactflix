@@ -54,11 +54,13 @@ function MovieCard(props: {movie: Movie}) {
           <div className={`ExpandedWrapper ${expanded? 'Visible' : ''}`}>
             <p className="MovieDescription">{props.movie.opening_crawl}</p>
             <p className="MovieDate">Released on: {formatDate(props.movie.edited)}</p>
-            <button
-              className="ActionButton"
-              onClick={() => history.push(`/movie/${props.movie.id}`)}>
-              GO TO MOVIE PAGE
-            </button>
+            <div className="ActionWrapper">
+                <button
+                    className="ActionButton"
+                    onClick={() => history.push(`/movie/${props.movie.id}`)}>
+                    GO TO MOVIE PAGE
+                </button>
+            </div>
           </div>
           <div className="MoreInfoWrapper">
             <p className="MoreInfoText">{expanded? 'Less Info' : 'More Info'}</p>

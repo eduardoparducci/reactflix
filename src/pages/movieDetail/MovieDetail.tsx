@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {getMovieDetails, getChar} from '../../services/api';
 import {Movie} from '../../models/movie';
-import {  useParams } from "react-router-dom";
+import {  useParams, useHistory } from "react-router-dom";
 import './MovieDetail.css';
 
 interface URLParams {
@@ -15,6 +15,7 @@ function formatDate(s: any) {
 function MovieDetail() {    
 
     // get movie id from URL
+    const history = useHistory();
     const { id } = useParams<URLParams>();
     const [movie, setMovie] = useState<Movie>();
     const [chars, setChars] = useState<string[]>([]);
@@ -50,6 +51,7 @@ function MovieDetail() {
           {!error && loading && <h2>Fetching movie from the dark side...</h2>}
           {!error && !loading && movie && (
               <>
+                <button className="BackButton" onClick={history.goBack} title="Back to home page">←</button>
 
                 <div className="ThumbDetailWrapper">
                   <img
@@ -58,7 +60,9 @@ function MovieDetail() {
                   />
                 </div>
 
-                <div className="TitleWrapper"><h1 className="Title">{movie.title}</h1></div>
+                <div className="TitleWrapper">
+                  <h1 className="Title">{movie.title}</h1>
+                </div>
 
                 <p className="TextInfo">Released on {formatDate(movie.release_date)}, {movie.title} was directed
                   by {movie.director} and produced by {movie.producer}. {movie.title} is the {movie.episode_id}

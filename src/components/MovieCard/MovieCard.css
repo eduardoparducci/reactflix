@@ -1,3 +1,8 @@
+.ActionWrapper {
+    height: 1.5rem;
+    position: relative;
+    margin: 0 2rem;
+}
 .ExpandedWrapper {
     visibility: hidden;
     opacity: 0;
@@ -12,8 +17,8 @@
     color: coral;
     font-weight: 700;
     position: absolute;
-    bottom: 2.5rem;
-    right: 2rem;
+    bottom: 0;
+    right: 0;
 }
 
 .ActionButton:hover {

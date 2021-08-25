@@ -1,3 +1,26 @@
+.BackButton {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #535353;
+    background: #fff7f2;
+    box-shadow: 5px 5px 10px #535353;
+    border: none;
+    display: inline;
+    position: fixed;
+    right: calc(10% - 1.5rem);
+    top: 2rem;
+    
+}
+
+.BackButton:hover {
+    background:  rgba(255, 127, 80, 0.15);
+    cursor: pointer;
+}
+
+
 .PageFrame {
     margin: 5rem 20%;
 }
@@ -34,6 +57,8 @@
 .Title {
     text-align: left;
     margin: 0;
+    display: inline;
+    line-height: 3rem;
 }
 
 .TitleWrapper {
