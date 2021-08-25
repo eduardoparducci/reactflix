@@ -1,6 +1,6 @@
 # Start Wars Movies List
 This LGPL project creates a minimal React frontend application to connect with the [Star Wars API](https://swapi.dev/).
-It was created as part of a job interview.
+It was created with the intention of learning React.
 
 
 ## Running the application
