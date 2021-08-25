@@ -7,9 +7,9 @@ export async function getMovies() {
     return response.data.results;
 }
 
-export async function getChars() {
-    const response = await axios.get(`${base_url}/people/`);
-    return response.data.results;
+export async function getChars(page: number) {
+    const response = await axios.get(`${base_url}/people/`, { params: { page: page}});
+    return response.data;
 }
 
 export async function getChar(url: string) {

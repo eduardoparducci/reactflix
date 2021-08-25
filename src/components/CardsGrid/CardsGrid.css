@@ -7,25 +7,6 @@
     margin-bottom: 4rem;
 }
 
-.CharCard {
-    position: relative;
-    background: #fff7f2;
-    border-radius: 0.5rem;
-    border-left: solid;
-    border-left-color: #535353;
-    padding: 1rem 0 0 0;
-    width: 16rem;
-    height: 10rem;
-    box-shadow: 5px 5px 10px #535353;
-    transition: 0.3s;
-    overflow: hidden;
-}
-
-.CharTitle {
-    font-size: medium;
-    margin: 1rem 0;
-    text-align: center;    
-}
 @media only screen and (max-width: 1000px) {
     .CardsGrid {
         grid-template-columns: 1fr;

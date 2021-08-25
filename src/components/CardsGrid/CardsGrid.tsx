@@ -1,46 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import {Movie} from '../../models/movie';
-import {Char} from '../../models/char';
+import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
+import CharCard from '../CharCard/CharCard';
 import './CardsGrid.css';
 
-function CardsGrid(props: {movies: Movie[], char: Char}) {
+function CardsGrid(props: {entity: any}) {
 
-    const [lukeMovies, setLukeMovies] = useState<string[]>([]);
-    
-    useEffect(() => {
-        const getLukeMovies = () => {
-            const test = [];
-            for (let movie of props.movies) {
-                if(props.char.films.includes(movie.url)) {
-                    test.push(movie.title);
-                }
-            }
-            setLukeMovies(test);
-        };            
-        getLukeMovies();
-    }, []);
-
-    return (
-        <>
-          <div className="CardsGrid">
-            {props.movies.map(movie => (
-                <MovieCard key={movie.episode_id} movie={movie}/>
-            ))}
-
-            <div className="CharCard">
-              <h3 className="CharTitle">{props.char.name}</h3>
-              <ul>{lukeMovies.map((movie, index) => (
-                  <li key={index}>
-                    {movie}
-                  </li>
+    if (props.entity[0].title) {
+        return (
+            <div className="CardsGrid">
+              {props.entity.map(movie => (
+                  <MovieCard key={movie.episode_id} movie={movie}/>
               ))}
-              </ul>
-            </div>
-
-          </div>          
-        </>
-    );
+            </div>          
+        );
+     }
+    else {
+        return (
+            <div className="CardsGrid">
+              {props.entity.map( (char, index) => (
+                  <CharCard key={index} char={char}/>
+              ))}
+            </div>          
+        );
+    }
 }
 
 export default CardsGrid;

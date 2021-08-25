@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import {Movie} from '../../models/movie';
 import './MovieCard.css';
+import { useHistory } from 'react-router-dom';
 
 function MovieCard(props: {movie: Movie}) {
 
+    const history = useHistory();
     const [expanded, setExpanded] = useState(false);
     
     function toggleExpanded(movie: Movie) {
@@ -12,31 +14,31 @@ function MovieCard(props: {movie: Movie}) {
     }
 
     function formatDate(date: string) {
-        const dias = [
-            "Domingo",
-            "Segunda-feira",
-            "Terça-feira",
-            "Quarta-feira",
-            "Quinta--feira",
-            "Sexta-feira",
-            "Sábado"
+        const week_days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
         ];
-        const meses = [
-            "janeiro",
-            "fevereiro",
-            "março",
-            "abril",
-            "maio",
-            "junho",
-            "julho",
-            "agosto",
-            "setembro",
-            "outubro",
-            "novembro",
-            "dezembro"
+        const months = [
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december"
         ];
         let dateISO = new Date(date);
-        let formattedDate = (( dias[dateISO.getDay()] + ", " + dateISO.getDate() + " de " + meses[(dateISO.getMonth())] + " de " + dateISO.getFullYear()));
+        let formattedDate = (( week_days[dateISO.getDay()] + ", " + dateISO.getDate() + " of " + months[(dateISO.getMonth())] + " of " + dateISO.getFullYear()));
         return formattedDate;
     }
     
@@ -48,9 +50,16 @@ function MovieCard(props: {movie: Movie}) {
               src={`${process.env.PUBLIC_URL}/assets/${props.movie.episode_id}.png`} alt="Movie thumb"
             />
           </div>
-          <h2 className="CardTitle">{props.movie.title}</h2>          
-          <p className={`MovieDescription ${expanded? 'Visible' : ''}`}>{props.movie.opening_crawl}</p>
-          <p className={`MovieDate ${expanded? 'Visible' : ''}`} >{formatDate(props.movie.edited)}</p>
+          <h2 className="CardTitle">{props.movie.title}</h2>
+          <div className={`ExpandedWrapper ${expanded? 'Visible' : ''}`}>
+            <p className="MovieDescription">{props.movie.opening_crawl}</p>
+            <p className="MovieDate">Released on: {formatDate(props.movie.edited)}</p>
+            <button
+              className="ActionButton"
+              onClick={() => history.push(`/movie/${props.movie.id}`)}>
+              GO TO MOVIE PAGE
+            </button>
+          </div>
           <div className="MoreInfoWrapper">
             <p className="MoreInfoText">{expanded? 'Less Info' : 'More Info'}</p>
             <p className="MoreInfoIcon">{expanded? '̭' : '̬'}    </p>
